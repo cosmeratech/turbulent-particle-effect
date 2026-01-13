@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    width: 580px;
+    aspect-ratio: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#card>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: url(#noise);
+}
+
+@keyframes pulse {
+
+    from,
+    to {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.05;
+    }
+}
+
+#card:hover>img {
+    animation: pulse 800ms ease-in-out;
+}
